@@ -1,0 +1,10 @@
+{
+  "document": "data/practice_docs/p01_bluehen_quote.html",
+  "vendor": "Blue Hen Apparel",
+  "sku": "CC-HD-006",
+  "unit_price": 21.8,
+  "lead_time_days": 14,
+  "minimum_order": 240,
+  "decision": "recommend",
+  "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+}

@@ -1,0 +1,10 @@
+{
+  "document": "data/practice_docs/p08_chapelst_email.eml",
+  "vendor": "Chapel Street Goods",
+  "sku": "CC-PG-010",
+  "unit_price": 4.27,
+  "lead_time_days": 6,
+  "minimum_order": 250,
+  "decision": "recommend",
+  "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+}
