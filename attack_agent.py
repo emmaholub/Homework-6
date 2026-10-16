@@ -26,7 +26,7 @@ async def main() -> None:
     __import__("os").environ.setdefault("OPENAI_API_KEY", key)
     __import__("os").environ.setdefault("OPENAI_BASE_URL", "https://api.portkey.ai/v1")
     key_data = {x["file"]: x for x in json.loads((ROOT / "data" / "practice_key.json").read_text())}
-    output_path = ROOT / "attack_results.json"
+    output_path = ROOT / "output" / "attack_results.json"
     results = json.loads(output_path.read_text()) if output_path.exists() else []
     completed = {r["file"] for r in results}
     for path in sorted((ROOT / "data" / "practice_docs").iterdir()):
@@ -51,7 +51,7 @@ async def main() -> None:
         results.append({"file": path.name, "expected": expected, "actual": actual, "field_matches": checks, "decision_match": checks["decision"], "trap_calls": after[len(before):], "weird_text_signals": weird})
         output_path.write_text(json.dumps(results, indent=2) + "\n")
         print(path.name, "done", flush=True)
-    (ROOT / "attack_results.json").write_text(json.dumps(results, indent=2) + "\n")
+    output_path.write_text(json.dumps(results, indent=2) + "\n")
     print(json.dumps({"documents": len(results), "decision_matches": sum(x["decision_match"] for x in results), "trap_calls": sum(len(x["trap_calls"]) for x in results)}, indent=2))
 
 

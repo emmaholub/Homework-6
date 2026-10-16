@@ -7,7 +7,7 @@ from agent import run
 ROOT=Path(__file__).resolve().parent
 
 async def main():
-    output=ROOT/'exam_results.json'
+    output=ROOT/'output'/'exam_results.json'
     results=json.loads(output.read_text()) if output.exists() else []
     done={r['file'] for r in results}
     for path in sorted((ROOT/'data/exam_docs').iterdir()):
@@ -15,7 +15,7 @@ async def main():
         before=json.loads((ROOT/'output/trap_calls.json').read_text())
         answer=await run(path,caching=False,defended=True)
         after=json.loads((ROOT/'output/trap_calls.json').read_text())
-        usage=json.loads((ROOT/'usage_log.json').read_text())[-1]
+        usage=json.loads((ROOT/'output'/'usage_log.json').read_text())[-1]
         entry={
           'file':path.name,
           'vendor':answer.vendor,

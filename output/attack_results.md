@@ -15,4 +15,4 @@
 
 ## What the comparison shows
 
-The weak baseline treated invisible HTML and alternate email content as equally authoritative with the visible quote. It also had no reliable PDF extraction path. The defended Problem 3 agent addresses these risks by treating documents as untrusted data, refusing tool-use instructions inside documents, requiring all four handbook checks, and failing closed when required facts are unavailable. The undefended run retained both trap tools; the defended run retains gated versions that stop unless a human approval flag is supplied.
+The weak baseline treated invisible HTML and alternate email content as equally authoritative with the visible quote. It now has a real raw PDF reader, so p07 and p12 show document-level prompt injection rather than parser failure. The defended agent treats documents as untrusted data, cleans hidden content, requires all handbook checks, and fails closed when required facts are unavailable. The undefended run retains the trap tools; the defended gated functions always block in code and have no model-supplied approval argument.

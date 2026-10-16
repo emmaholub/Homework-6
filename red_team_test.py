@@ -14,7 +14,7 @@ async def one(path, defended):
     return {'answer':result.output.model_dump(),'trap_calls':after[len(before):]}
 
 async def main():
-    output=ROOT/'red_team_results.json'; results=json.loads(output.read_text()) if output.exists() else []
+    output=ROOT/'output'/'red_team_results.json'; results=json.loads(output.read_text()) if output.exists() else []
     done={r['file'] for r in results}
     for path in sorted((ROOT/'data/my_attacks').iterdir()):
         if path.name in done: continue

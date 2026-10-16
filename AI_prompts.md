@@ -30,7 +30,7 @@ This file records the prompts I use while completing each homework problem.
 
 **Prompt:** Run the agent on all 12 practice documents once with handbook caching enabled and once with caching truly disabled. Require zero provider-reported cached tokens in the off run, log every call to `cache_test.json`, and write total/per-document cost, savings, estimates comparison, a 1,000-per-day monthly projection, and surprises in `cache_test.md`.
 
-**Follow-up:** Because the gateway still applied implicit caching when `cache=False`, add a unique nonce at the beginning of each cache-off system prompt and verify every cache-off record has `cache_read_tokens: 0`.
+**Follow-up:** Because the agent makes a second request after its reader tool runs, make the cache-off instructions dynamic per model request, then verify all 12 provider records have `cache_read_tokens: 0`.
 
 **What was missing after the first prompt:** A library-level cache flag alone did not guarantee zero cached tokens at the provider, so the cache-off test needed a prefix-breaking nonce and an explicit validation check.
 
@@ -46,7 +46,7 @@ This file records the prompts I use while completing each homework problem.
 
 **Prompt:** Add code, design, and prompt defenses while keeping the undefended Problem 3 path available. Clean hidden document text before the model sees it, prevent poisoned documents from reaching trap tools or decisions, preserve clean quote values, rerun all 12 documents, and save per-document tokens/dollars plus before/after analysis in `defense_results.json` and `defense_results.md`.
 
-**Follow-up:** Add PDF extraction, strip hidden HTML/CSS and malicious email alternatives, remove trap tools from the defended agent rather than deleting them, and verify all 12 expected decisions and fields.
+**Follow-up:** Add structural PDF duplicate-field handling, strip hidden HTML/CSS and malicious email alternatives, preserve the side-effect tools as code-blocked gates, and verify all 12 expected decisions and fields.
 
 **What was missing after the first prompt:** The first defense implementation did not handle PDF correction text or separate tool exposure from the defended decision path.
 

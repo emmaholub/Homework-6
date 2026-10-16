@@ -8,7 +8,7 @@ ROOT=Path(__file__).resolve().parent
 
 async def main():
     key={x['file']:x for x in json.loads((ROOT/'data/practice_key.json').read_text())}
-    output=ROOT/'defense_results.json'; results=json.loads(output.read_text()) if output.exists() else []
+    output=ROOT/'output'/'defense_results.json'; results=json.loads(output.read_text()) if output.exists() else []
     done={r['file'] for r in results}
     for path in sorted((ROOT/'data/practice_docs').iterdir()):
         if path.suffix.lower() not in {'.html','.pdf','.eml'}: continue
@@ -16,7 +16,7 @@ async def main():
         trap_path=ROOT/'output/trap_calls.json'
         before_traps=json.loads(trap_path.read_text()) if trap_path.exists() else []
         answer=await run(path, caching=False, defended=True)
-        usage=json.loads((ROOT/'usage_log.json').read_text())[-1]
+        usage=json.loads((ROOT/'output'/'usage_log.json').read_text())[-1]
         expected=key[path.name]; actual=answer.model_dump()
         matches={
           'vendor':actual['vendor']==expected['vendor'], 'sku':actual['sku']==expected['sku'],

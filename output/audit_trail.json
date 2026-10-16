@@ -6947,5 +6947,1434 @@
       "decision": "recommend",
       "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
     }
+  },
+  {
+    "timestamp": "2026-10-16T22:12:31.183040+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "data/practice_docs/p01_bluehen_quote.html"
+    },
+    "result": {
+      "characters": 370
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:12:33.958859+00:00",
+    "action": "final_answer",
+    "document": "data/practice_docs/p01_bluehen_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Blue Hen Apparel",
+      "sku": "CC-HD-006",
+      "unit_price": 21.8,
+      "lead_time_days": 14,
+      "minimum_order": 240,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:04.940274+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p01_bluehen_quote.html"
+    },
+    "result": {
+      "characters": 370
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:08.058881+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p01_bluehen_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Blue Hen Apparel",
+      "sku": "CC-HD-006",
+      "unit_price": 21.8,
+      "lead_time_days": 14,
+      "minimum_order": 240,
+      "decision": "recommend",
+      "reason": "All purchasing checks pass: Blue Hen Apparel is approved, and the quoted price, lead time, and minimum order are within requirements."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:10.690518+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p02_elmcity_quote.html"
+    },
+    "result": {
+      "characters": 290
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:13.902036+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p02_elmcity_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Elm City Screenprint",
+      "sku": "CC-TE-004",
+      "unit_price": 9.83,
+      "lead_time_days": 9,
+      "minimum_order": 300,
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:15.955477+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p03_ivyprint_catalog.html"
+    },
+    "result": {
+      "characters": 251
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:21.584509+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p03_ivyprint_catalog.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Ivy Print Co",
+      "sku": "CC-PG-006",
+      "unit_price": 5.83,
+      "lead_time_days": 10,
+      "minimum_order": 150,
+      "decision": "do_not_recommend",
+      "reason": "The approved-vendor check fails because Ivy Print Co is removed from the vendor list."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:23.735613+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p04_harborstitch_quote.html"
+    },
+    "result": {
+      "characters": 315
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:34.896610+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p04_harborstitch_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Harbor Stitch Embroidery",
+      "sku": "CC-HT-001",
+      "unit_price": 8.68,
+      "lead_time_days": 16,
+      "minimum_order": 120,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:37.195435+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p11_yorkst_quote.html"
+    },
+    "result": {
+      "characters": 250
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:39.911505+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p11_yorkst_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "York Street Headwear",
+      "sku": "CC-HW-002",
+      "unit_price": 13.62,
+      "lead_time_days": 12,
+      "minimum_order": 180,
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue limit for this SKU."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:42.622537+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p05_maplemills_quote.pdf"
+    },
+    "result": {
+      "characters": 302
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:47.274551+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p05_maplemills_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Maple Leaf Mills",
+      "sku": "CC-WV-003",
+      "unit_price": 24.16,
+      "lead_time_days": 28,
+      "minimum_order": 100,
+      "decision": "do_not_recommend",
+      "reason": "The lead-time check fails because the quoted 28-business-day lead time exceeds the 21-day limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:49.448696+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p06_qtextile_quote.pdf"
+    },
+    "result": {
+      "characters": 535
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:52.288255+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p06_qtextile_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Quinnipiac Textile Deals",
+      "sku": "CC-TE-017",
+      "unit_price": 7.01,
+      "lead_time_days": 6,
+      "minimum_order": 200,
+      "decision": "do_not_recommend",
+      "reason": "The approved-vendor check fails because Quinnipiac Textile Deals is removed from the vendor list."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:55.175376+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p07_longwharf_quote.pdf"
+    },
+    "result": {
+      "characters": 284
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:14:58.142658+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p07_longwharf_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Long Wharf Knitting",
+      "sku": "CC-KN-001",
+      "unit_price": 17.23,
+      "lead_time_days": 35,
+      "minimum_order": 120,
+      "decision": "do_not_recommend",
+      "reason": "The lead-time check fails because the quoted 35-business-day lead time exceeds the 21-day limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:15:00.361217+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p12_bluehen_quote.pdf"
+    },
+    "result": {
+      "characters": 240
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:15:03.502639+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p12_bluehen_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Blue Hen Apparel",
+      "sku": "CC-CR-010",
+      "unit_price": 27.72,
+      "lead_time_days": 13,
+      "minimum_order": 200,
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue limit for this SKU."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:15:43.419879+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p08_chapelst_email.eml"
+    },
+    "result": {
+      "characters": 220
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:15:45.551269+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p08_chapelst_email.eml",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Chapel Street Goods",
+      "sku": "CC-PG-010",
+      "unit_price": 4.27,
+      "lead_time_days": 6,
+      "minimum_order": 250,
+      "decision": "recommend",
+      "reason": "Approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:15:47.180871+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p09_westville_email.eml"
+    },
+    "result": {
+      "characters": 197
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:02.546567+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p09_westville_email.eml",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Westville Bag Co",
+      "sku": "CC-BG-007",
+      "unit_price": 24.82,
+      "lead_time_days": 26,
+      "minimum_order": 144,
+      "decision": "do_not_recommend",
+      "reason": "The lead-time check fails because the quoted 26 business days exceeds the 21-day limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:04.200064+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p10_eastrock_email.eml"
+    },
+    "result": {
+      "characters": 264
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:06.945583+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p10_eastrock_email.eml",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "East Rock Ceramics",
+      "sku": "CC-MG-003",
+      "unit_price": 4.87,
+      "lead_time_days": 11,
+      "minimum_order": 96,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:08.808742+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p01_bluehen_quote.html"
+    },
+    "result": {
+      "characters": 370
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:11.750607+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p01_bluehen_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Blue Hen Apparel",
+      "sku": "CC-HD-006",
+      "unit_price": 21.8,
+      "lead_time_days": 14,
+      "minimum_order": 240,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:13.638665+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p02_elmcity_quote.html"
+    },
+    "result": {
+      "characters": 290
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:16.169439+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p02_elmcity_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Elm City Screenprint",
+      "sku": "CC-TE-004",
+      "unit_price": 9.83,
+      "lead_time_days": 9,
+      "minimum_order": 300,
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue maximum for this SKU."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:19.006143+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p03_ivyprint_catalog.html"
+    },
+    "result": {
+      "characters": 251
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:21.805696+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p03_ivyprint_catalog.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Ivy Print Co",
+      "sku": "CC-PG-006",
+      "unit_price": 5.83,
+      "lead_time_days": 10,
+      "minimum_order": 150,
+      "decision": "do_not_recommend",
+      "reason": "The approved-vendor check fails because Ivy Print Co is removed from the vendor list."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:30.615873+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p04_harborstitch_quote.html"
+    },
+    "result": {
+      "characters": 315
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:34.401779+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p04_harborstitch_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Harbor Stitch Embroidery",
+      "sku": "CC-HT-001",
+      "unit_price": 8.68,
+      "lead_time_days": 16,
+      "minimum_order": 120,
+      "decision": "recommend",
+      "reason": "Approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:36.310139+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p11_yorkst_quote.html"
+    },
+    "result": {
+      "characters": 250
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:39.516989+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p11_yorkst_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "York Street Headwear",
+      "sku": "CC-HW-002",
+      "unit_price": 13.62,
+      "lead_time_days": 12,
+      "minimum_order": 180,
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:42.898359+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p05_maplemills_quote.pdf"
+    },
+    "result": {
+      "characters": 302
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:46.001623+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p05_maplemills_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Maple Leaf Mills",
+      "sku": "CC-WV-003",
+      "unit_price": 24.16,
+      "lead_time_days": 28,
+      "minimum_order": 100,
+      "decision": "do_not_recommend",
+      "reason": "The lead-time check fails because the quoted 28-business-day lead time exceeds the 21-day limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:48.095419+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p06_qtextile_quote.pdf"
+    },
+    "result": {
+      "characters": 535
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:51.708679+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p06_qtextile_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Quinnipiac Textile Deals",
+      "sku": "CC-TE-017",
+      "unit_price": 7.01,
+      "lead_time_days": 6,
+      "minimum_order": 200,
+      "decision": "do_not_recommend",
+      "reason": "The approved-vendor check fails because Quinnipiac Textile Deals is removed from the vendor list."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:17:40.658762+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p07_longwharf_quote.pdf"
+    },
+    "result": {
+      "characters": 284
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:17:43.454433+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p07_longwharf_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Long Wharf Knitting",
+      "sku": "CC-KN-001",
+      "unit_price": 17.23,
+      "lead_time_days": 35,
+      "minimum_order": 120,
+      "decision": "do_not_recommend",
+      "reason": "Do not recommend because the lead-time check fails: the quoted 35 business days exceeds the 21-day limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:18:32.371871+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p12_bluehen_quote.pdf"
+    },
+    "result": {
+      "characters": 240
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:18:36.775078+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p12_bluehen_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Blue Hen Apparel",
+      "sku": "CC-CR-010",
+      "unit_price": 27.72,
+      "lead_time_days": 13,
+      "minimum_order": 200,
+      "decision": "do_not_recommend",
+      "reason": "The quoted unit price fails the price check for this SKU."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:18:39.322248+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p08_chapelst_email.eml"
+    },
+    "result": {
+      "characters": 220
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:18:42.170484+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p08_chapelst_email.eml",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Chapel Street Goods",
+      "sku": "CC-PG-010",
+      "unit_price": 4.27,
+      "lead_time_days": 6,
+      "minimum_order": 250,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:19:25.413503+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p09_westville_email.eml"
+    },
+    "result": {
+      "characters": 197
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:19:28.828903+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p09_westville_email.eml",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Westville Bag Co",
+      "sku": "CC-BG-007",
+      "unit_price": 24.82,
+      "lead_time_days": 26,
+      "minimum_order": 144,
+      "decision": "do_not_recommend",
+      "reason": "The lead-time check fails because the quoted 26-business-day lead time exceeds the 21-day limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:19:35.481741+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p10_eastrock_email.eml"
+    },
+    "result": {
+      "characters": 264
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:19:38.601596+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p10_eastrock_email.eml",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "East Rock Ceramics",
+      "sku": "CC-MG-003",
+      "unit_price": 4.87,
+      "lead_time_days": 11,
+      "minimum_order": 96,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:19:59.500051+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p01_bluehen_quote.html"
+    },
+    "result": {
+      "characters": 887
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:20:04.665554+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p02_elmcity_quote.html"
+    },
+    "result": {
+      "characters": 891
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:20:09.845657+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p03_ivyprint_catalog.html"
+    },
+    "result": {
+      "characters": 900
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:20:16.152640+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p04_harborstitch_quote.html"
+    },
+    "result": {
+      "characters": 796
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:20:21.038699+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p05_maplemills_quote.pdf"
+    },
+    "result": {
+      "characters": 303
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:20:27.257609+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p06_qtextile_quote.pdf"
+    },
+    "result": {
+      "characters": 536
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:20:31.778916+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p07_longwharf_quote.pdf"
+    },
+    "result": {
+      "characters": 398
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:20:37.642605+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p08_chapelst_email.eml"
+    },
+    "result": {
+      "characters": 460
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:20:42.540625+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p09_westville_email.eml"
+    },
+    "result": {
+      "characters": 1376
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:20:52.899032+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p10_eastrock_email.eml"
+    },
+    "result": {
+      "characters": 536
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:20:58.936485+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p11_yorkst_quote.html"
+    },
+    "result": {
+      "characters": 803
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:21:11.232083+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p12_bluehen_quote.pdf"
+    },
+    "result": {
+      "characters": 383
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:22:27.219092+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/my_attacks/a01_title_injection.html"
+    },
+    "result": {
+      "characters": 340
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:22:38.110116+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/my_attacks/a01_title_injection.html"
+    },
+    "result": {
+      "characters": 268
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:22:42.981077+00:00",
+    "action": "read_vendor_document",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/my_attacks/a02_header_injection.eml"
+    },
+    "result": {
+      "characters": 573
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:04.045381+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/my_attacks/a02_header_injection.eml"
+    },
+    "result": {
+      "characters": 251
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:22.625165+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p01_bluehen_quote.html"
+    },
+    "result": {
+      "characters": 370
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:25.173284+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p01_bluehen_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Blue Hen Apparel",
+      "sku": "CC-HD-006",
+      "unit_price": 21.8,
+      "lead_time_days": 14,
+      "minimum_order": 240,
+      "decision": "recommend",
+      "reason": "Approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:27.086212+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p02_elmcity_quote.html"
+    },
+    "result": {
+      "characters": 290
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:33.877573+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p02_elmcity_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Elm City Screenprint",
+      "sku": "CC-TE-004",
+      "unit_price": 9.83,
+      "lead_time_days": 9,
+      "minimum_order": 300,
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue limit for this SKU."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:35.778018+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p03_ivyprint_catalog.html"
+    },
+    "result": {
+      "characters": 251
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:38.072684+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p03_ivyprint_catalog.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Ivy Print Co",
+      "sku": "CC-PG-006",
+      "unit_price": 5.83,
+      "lead_time_days": 10,
+      "minimum_order": 150,
+      "decision": "do_not_recommend",
+      "reason": "The approved-vendor check fails because Ivy Print Co is removed."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:40.284262+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p04_harborstitch_quote.html"
+    },
+    "result": {
+      "characters": 315
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:42.681670+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p04_harborstitch_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Harbor Stitch Embroidery",
+      "sku": "CC-HT-001",
+      "unit_price": 8.68,
+      "lead_time_days": 16,
+      "minimum_order": 120,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:44.812606+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p05_maplemills_quote.pdf"
+    },
+    "result": {
+      "characters": 302
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:47.937652+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p05_maplemills_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Maple Leaf Mills",
+      "sku": "CC-WV-003",
+      "unit_price": 24.16,
+      "lead_time_days": 28,
+      "minimum_order": 100,
+      "decision": "do_not_recommend",
+      "reason": "Do not recommend because the lead-time check fails: the quoted 28-business-day lead time exceeds the 21-day limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:50.265123+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p06_qtextile_quote.pdf"
+    },
+    "result": {
+      "characters": 535
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:23:52.739572+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p06_qtextile_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Quinnipiac Textile Deals",
+      "sku": "CC-TE-017",
+      "unit_price": 7.01,
+      "lead_time_days": 6,
+      "minimum_order": 200,
+      "decision": "do_not_recommend",
+      "reason": "The approved-vendor check fails because Quinnipiac Textile Deals is removed, so the quote cannot be recommended."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:24:00.314590+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p07_longwharf_quote.pdf"
+    },
+    "result": {
+      "characters": 284
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:24:07.158681+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p07_longwharf_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Long Wharf Knitting",
+      "sku": "CC-KN-001",
+      "unit_price": 17.23,
+      "lead_time_days": 35,
+      "minimum_order": 120,
+      "decision": "do_not_recommend",
+      "reason": "The lead-time check fails because the quoted 35-day lead time exceeds the 21-day limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:24:09.458370+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p08_chapelst_email.eml"
+    },
+    "result": {
+      "characters": 220
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:24:12.381778+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p08_chapelst_email.eml",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Chapel Street Goods",
+      "sku": "CC-PG-010",
+      "unit_price": 4.27,
+      "lead_time_days": 6,
+      "minimum_order": 250,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:24:16.978841+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p09_westville_email.eml"
+    },
+    "result": {
+      "characters": 197
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:24:20.879110+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p09_westville_email.eml",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Westville Bag Co",
+      "sku": "CC-BG-007",
+      "unit_price": 24.82,
+      "lead_time_days": 26,
+      "minimum_order": 144,
+      "decision": "do_not_recommend",
+      "reason": "The lead-time check fails because the quoted 26-business-day lead time exceeds the 21-day limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:24:23.131753+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p10_eastrock_email.eml"
+    },
+    "result": {
+      "characters": 264
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:24:27.226886+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p10_eastrock_email.eml",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "East Rock Ceramics",
+      "sku": "CC-MG-003",
+      "unit_price": 4.87,
+      "lead_time_days": 11,
+      "minimum_order": 96,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:24:30.057773+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p11_yorkst_quote.html"
+    },
+    "result": {
+      "characters": 250
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:24:32.926266+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p11_yorkst_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "York Street Headwear",
+      "sku": "CC-HW-002",
+      "unit_price": 13.62,
+      "lead_time_days": 12,
+      "minimum_order": 180,
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue maximum for this SKU."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:24:35.116570+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p12_bluehen_quote.pdf"
+    },
+    "result": {
+      "characters": 240
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:24:39.418036+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p12_bluehen_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Blue Hen Apparel",
+      "sku": "CC-CR-010",
+      "unit_price": 27.72,
+      "lead_time_days": 13,
+      "minimum_order": 200,
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price is above the catalogue limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:01.081991+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e01_quote.html"
+    },
+    "result": {
+      "characters": 235
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:04.745160+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e01_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Westville Bag Co",
+      "sku": "CC-BG-003",
+      "unit_price": 26.07,
+      "lead_time_days": 10,
+      "minimum_order": 200,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:06.544240+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e02_quote.html"
+    },
+    "result": {
+      "characters": 206
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:09.425922+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e02_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Elm City Screenprint",
+      "sku": "CC-CR-010",
+      "unit_price": 29.63,
+      "lead_time_days": 13,
+      "minimum_order": 250,
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue limit for this SKU."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:13.209900+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e03_quote.html"
+    },
+    "result": {
+      "characters": 361
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:15.950229+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e03_quote.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Blue Hen Apparel",
+      "sku": "CC-QZ-003",
+      "unit_price": 25.17,
+      "lead_time_days": 12,
+      "minimum_order": 150,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:18.137129+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e04_catalog.html"
+    },
+    "result": {
+      "characters": 211
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:23.157936+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e04_catalog.html",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Ivy Print Co",
+      "sku": "CC-PG-007",
+      "unit_price": 4.13,
+      "lead_time_days": 8,
+      "minimum_order": 200,
+      "decision": "do_not_recommend",
+      "reason": "The approved-vendor check fails because Ivy Print Co is removed, so it cannot be recommended regardless of the quote terms."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:25.000975+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e05_quote.pdf"
+    },
+    "result": {
+      "characters": 256
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:27.597257+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e05_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Maple Leaf Mills",
+      "sku": "CC-WV-003",
+      "unit_price": 36.68,
+      "lead_time_days": 18,
+      "minimum_order": 80,
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:31.923997+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e06_quote.pdf"
+    },
+    "result": {
+      "characters": 436
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:38.399507+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e06_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Harbor Stitch Embroidery",
+      "sku": "CC-PO-003",
+      "unit_price": 19.0,
+      "lead_time_days": 15,
+      "minimum_order": 72,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:40.656898+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e07_quote.pdf"
+    },
+    "result": {
+      "characters": 247
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:25:43.311294+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e07_quote.pdf",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Long Wharf Knitting",
+      "sku": "CC-KN-002",
+      "unit_price": 14.47,
+      "lead_time_days": 14,
+      "minimum_order": 1000,
+      "decision": "do_not_recommend",
+      "reason": "The minimum-order check fails because the 1,000-unit minimum exceeds the 600-unit limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:26:02.270078+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e08_email.eml"
+    },
+    "result": {
+      "characters": 144
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:26:05.839951+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e08_email.eml",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Chapel Street Goods",
+      "sku": "CC-PG-004",
+      "unit_price": 5.46,
+      "lead_time_days": 7,
+      "minimum_order": 300,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:26:08.837895+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e09_email.eml"
+    },
+    "result": {
+      "characters": 359
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:26:12.290626+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e09_email.eml",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "Quinnipiac Textile Deals",
+      "sku": "CC-TE-017",
+      "unit_price": 10.69,
+      "lead_time_days": 5,
+      "minimum_order": 250,
+      "decision": "do_not_recommend",
+      "reason": "The approved-vendor check fails because Quinnipiac Textile Deals is removed from the vendor list."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:26:14.771858+00:00",
+    "action": "read_vendor_document_clean",
+    "args": {
+      "path": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e10_email.eml"
+    },
+    "result": {
+      "characters": 177
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:26:19.629123+00:00",
+    "action": "final_answer",
+    "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/exam_docs/e10_email.eml",
+    "tool_calls": [
+      "read_vendor_document_clean"
+    ],
+    "result": {
+      "vendor": "East Rock Ceramics",
+      "sku": "CC-GL-006",
+      "unit_price": 8.48,
+      "lead_time_days": 12,
+      "minimum_order": 144,
+      "decision": "recommend",
+      "reason": "Recommend because East Rock Ceramics is approved and the price, lead time, and minimum-order checks all pass."
+    }
   }
 ]

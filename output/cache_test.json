@@ -1,20 +1,20 @@
 [
   {
-    "timestamp": "2026-10-16T20:26:57.798043+00:00",
+    "timestamp": "2026-10-16T22:14:08.062141+00:00",
     "document": "data/practice_docs/p01_bluehen_quote.html",
     "caching": true,
     "status": "ok",
     "usage": {
-      "timestamp": "2026-10-16T20:26:57.788747+00:00",
+      "timestamp": "2026-10-16T22:14:08.058051+00:00",
       "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p01_bluehen_quote.html",
       "model": "gpt-6-luna",
       "caching": true,
       "input_tokens": 21349,
       "cache_write_tokens": 10620,
       "cache_read_tokens": 10477,
-      "output_tokens": 178,
-      "total_tokens": 21527,
-      "estimated_cost": 0.0015464699999999999
+      "output_tokens": 212,
+      "total_tokens": 21561,
+      "estimated_cost": 0.0015634699999999997
     },
     "answer": {
       "vendor": "Blue Hen Apparel",
@@ -23,349 +23,25 @@
       "lead_time_days": 14,
       "minimum_order": 240,
       "decision": "recommend",
-      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+      "reason": "All purchasing checks pass: Blue Hen Apparel is approved, and the quoted price, lead time, and minimum order are within requirements."
     }
   },
   {
-    "timestamp": "2026-10-16T20:27:03.086991+00:00",
+    "timestamp": "2026-10-16T22:14:13.908049+00:00",
     "document": "data/practice_docs/p02_elmcity_quote.html",
     "caching": true,
     "status": "ok",
     "usage": {
-      "timestamp": "2026-10-16T20:27:03.083269+00:00",
+      "timestamp": "2026-10-16T22:14:13.901278+00:00",
       "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p02_elmcity_quote.html",
       "model": "gpt-6-luna",
       "caching": true,
       "input_tokens": 21333,
       "cache_write_tokens": 169,
       "cache_read_tokens": 20912,
-      "output_tokens": 181,
-      "total_tokens": 21514,
-      "estimated_cost": 0.00034594499999999995
-    },
-    "answer": {
-      "vendor": "Elm City Screenprint",
-      "sku": "CC-TE-004",
-      "unit_price": 9.83,
-      "lead_time_days": 9,
-      "minimum_order": 300,
-      "decision": "do_not_recommend",
-      "reason": "The price check fails because the quoted unit price exceeds the catalogue limit for this SKU."
-    }
-  },
-  {
-    "timestamp": "2026-10-16T20:27:11.010816+00:00",
-    "document": "data/practice_docs/p03_ivyprint_catalog.html",
-    "caching": true,
-    "status": "ok",
-    "usage": {
-      "timestamp": "2026-10-16T20:27:11.000417+00:00",
-      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p03_ivyprint_catalog.html",
-      "model": "gpt-6-luna",
-      "caching": true,
-      "input_tokens": 21323,
-      "cache_write_tokens": 159,
-      "cache_read_tokens": 20912,
-      "output_tokens": 165,
-      "total_tokens": 21488,
-      "estimated_cost": 0.00033669500000000003
-    },
-    "answer": {
-      "vendor": "Ivy Print Co",
-      "sku": "CC-PG-006",
-      "unit_price": 5.83,
-      "lead_time_days": 10,
-      "minimum_order": 150,
-      "decision": "do_not_recommend",
-      "reason": "The approved-vendor check fails because Ivy Print Co is removed from the vendor list."
-    }
-  },
-  {
-    "timestamp": "2026-10-16T20:27:43.773680+00:00",
-    "document": "data/practice_docs/p04_harborstitch_quote.html",
-    "caching": true,
-    "status": "ok",
-    "usage": {
-      "timestamp": "2026-10-16T20:27:43.769286+00:00",
-      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p04_harborstitch_quote.html",
-      "model": "gpt-6-luna",
-      "caching": true,
-      "input_tokens": 21350,
-      "cache_write_tokens": 184,
-      "cache_read_tokens": 20914,
-      "output_tokens": 270,
-      "total_tokens": 21620,
-      "estimated_cost": 0.00039234000000000003
-    },
-    "answer": {
-      "vendor": "Harbor Stitch Embroidery",
-      "sku": "CC-HT-001",
-      "unit_price": 8.68,
-      "lead_time_days": 16,
-      "minimum_order": 120,
-      "decision": "recommend",
-      "reason": "All purchasing checks pass: Harbor Stitch is approved, the quoted price is within the catalogue limit, the 16-day lead time is within the limit, and the 120-unit minimum is within the limit."
-    }
-  },
-  {
-    "timestamp": "2026-10-16T20:27:49.691400+00:00",
-    "document": "data/practice_docs/p11_yorkst_quote.html",
-    "caching": true,
-    "status": "ok",
-    "usage": {
-      "timestamp": "2026-10-16T20:27:49.687246+00:00",
-      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p11_yorkst_quote.html",
-      "model": "gpt-6-luna",
-      "caching": true,
-      "input_tokens": 21323,
-      "cache_write_tokens": 159,
-      "cache_read_tokens": 20912,
-      "output_tokens": 213,
-      "total_tokens": 21536,
-      "estimated_cost": 0.000360695
-    },
-    "answer": {
-      "vendor": "York Street Headwear",
-      "sku": "CC-HW-002",
-      "unit_price": 13.62,
-      "lead_time_days": 12,
-      "minimum_order": 180,
-      "decision": "do_not_recommend",
-      "reason": "The price check fails because the quoted unit price is above the catalogue limit."
-    }
-  },
-  {
-    "timestamp": "2026-10-16T20:27:55.315843+00:00",
-    "document": "data/practice_docs/p05_maplemills_quote.pdf",
-    "caching": true,
-    "status": "ok",
-    "usage": {
-      "timestamp": "2026-10-16T20:27:55.311664+00:00",
-      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p05_maplemills_quote.pdf",
-      "model": "gpt-6-luna",
-      "caching": true,
-      "input_tokens": 21354,
-      "cache_write_tokens": 190,
-      "cache_read_tokens": 20912,
-      "output_tokens": 202,
-      "total_tokens": 21556,
-      "estimated_cost": 0.00035907
-    },
-    "answer": {
-      "vendor": "Maple Leaf Mills",
-      "sku": "CC-WV-003",
-      "unit_price": 24.16,
-      "lead_time_days": 28,
-      "minimum_order": 100,
-      "decision": "do_not_recommend",
-      "reason": "The lead-time check fails because the quoted 28-business-day lead time exceeds the 21-day limit."
-    }
-  },
-  {
-    "timestamp": "2026-10-16T20:27:59.656721+00:00",
-    "document": "data/practice_docs/p06_qtextile_quote.pdf",
-    "caching": true,
-    "status": "ok",
-    "usage": {
-      "timestamp": "2026-10-16T20:27:59.649110+00:00",
-      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p06_qtextile_quote.pdf",
-      "model": "gpt-6-luna",
-      "caching": true,
-      "input_tokens": 21398,
-      "cache_write_tokens": 234,
-      "cache_read_tokens": 20912,
-      "output_tokens": 202,
-      "total_tokens": 21600,
-      "estimated_cost": 0.00036457000000000004
-    },
-    "answer": {
-      "vendor": "Quinnipiac Textile Deals",
-      "sku": "CC-TE-017",
-      "unit_price": 7.01,
-      "lead_time_days": 6,
-      "minimum_order": 200,
-      "decision": "do_not_recommend",
-      "reason": "The approved-vendor check fails because Quinnipiac Textile Deals is removed from the vendor list."
-    }
-  },
-  {
-    "timestamp": "2026-10-16T20:28:06.440157+00:00",
-    "document": "data/practice_docs/p07_longwharf_quote.pdf",
-    "caching": true,
-    "status": "ok",
-    "usage": {
-      "timestamp": "2026-10-16T20:28:06.428637+00:00",
-      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p07_longwharf_quote.pdf",
-      "model": "gpt-6-luna",
-      "caching": true,
-      "input_tokens": 21373,
-      "cache_write_tokens": 209,
-      "cache_read_tokens": 20912,
-      "output_tokens": 262,
-      "total_tokens": 21635,
-      "estimated_cost": 0.00039144500000000003
-    },
-    "answer": {
-      "vendor": "Long Wharf Knitting",
-      "sku": "CC-KN-001",
-      "unit_price": 17.23,
-      "lead_time_days": 7,
-      "minimum_order": 120,
-      "decision": "recommend",
-      "reason": "Recommend because the approved-vendor, price, corrected lead-time, and minimum-order checks all pass."
-    }
-  },
-  {
-    "timestamp": "2026-10-16T20:28:11.603056+00:00",
-    "document": "data/practice_docs/p12_bluehen_quote.pdf",
-    "caching": true,
-    "status": "ok",
-    "usage": {
-      "timestamp": "2026-10-16T20:28:11.597160+00:00",
-      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p12_bluehen_quote.pdf",
-      "model": "gpt-6-luna",
-      "caching": true,
-      "input_tokens": 21371,
-      "cache_write_tokens": 208,
-      "cache_read_tokens": 20911,
-      "output_tokens": 210,
-      "total_tokens": 21581,
-      "estimated_cost": 0.00036531
-    },
-    "answer": {
-      "vendor": "Blue Hen Apparel",
-      "sku": "CC-CR-010",
-      "unit_price": 17.44,
-      "lead_time_days": 13,
-      "minimum_order": 200,
-      "decision": "recommend",
-      "reason": "Recommend because the approved-vendor, price, lead-time, and minimum-order checks all pass."
-    }
-  },
-  {
-    "timestamp": "2026-10-16T20:28:23.634781+00:00",
-    "document": "data/practice_docs/p08_chapelst_email.eml",
-    "caching": true,
-    "status": "ok",
-    "usage": {
-      "timestamp": "2026-10-16T20:28:23.623249+00:00",
-      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p08_chapelst_email.eml",
-      "model": "gpt-6-luna",
-      "caching": true,
-      "input_tokens": 21329,
-      "cache_write_tokens": 164,
-      "cache_read_tokens": 20913,
-      "output_tokens": 269,
-      "total_tokens": 21598,
-      "estimated_cost": 0.00038933
-    },
-    "answer": {
-      "vendor": "Chapel Street Goods",
-      "sku": "CC-PG-010",
-      "unit_price": 4.27,
-      "lead_time_days": 6,
-      "minimum_order": 250,
-      "decision": "recommend",
-      "reason": "All purchasing checks pass: Chapel Street Goods is approved, and the quoted price, six-day lead time, and 250-unit minimum meet the applicable limits."
-    }
-  },
-  {
-    "timestamp": "2026-10-16T20:28:41.465405+00:00",
-    "document": "data/practice_docs/p09_westville_email.eml",
-    "caching": true,
-    "status": "ok",
-    "usage": {
-      "timestamp": "2026-10-16T20:28:41.461275+00:00",
-      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p09_westville_email.eml",
-      "model": "gpt-6-luna",
-      "caching": true,
-      "input_tokens": 21326,
-      "cache_write_tokens": 161,
-      "cache_read_tokens": 20913,
-      "output_tokens": 177,
-      "total_tokens": 21503,
-      "estimated_cost": 0.000342955
-    },
-    "answer": {
-      "vendor": "Westville Bag Co",
-      "sku": "CC-BG-007",
-      "unit_price": 24.82,
-      "lead_time_days": 26,
-      "minimum_order": 144,
-      "decision": "do_not_recommend",
-      "reason": "The lead-time check fails because the quoted 26-day lead time exceeds the 21-day limit."
-    }
-  },
-  {
-    "timestamp": "2026-10-16T20:28:47.348704+00:00",
-    "document": "data/practice_docs/p10_eastrock_email.eml",
-    "caching": true,
-    "status": "ok",
-    "usage": {
-      "timestamp": "2026-10-16T20:28:47.338078+00:00",
-      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p10_eastrock_email.eml",
-      "model": "gpt-6-luna",
-      "caching": true,
-      "input_tokens": 21341,
-      "cache_write_tokens": 176,
-      "cache_read_tokens": 20913,
-      "output_tokens": 239,
-      "total_tokens": 21580,
-      "estimated_cost": 0.00037583000000000007
-    },
-    "answer": {
-      "vendor": "East Rock Ceramics",
-      "sku": "CC-MG-003",
-      "unit_price": 4.87,
-      "lead_time_days": 11,
-      "minimum_order": 96,
-      "decision": "recommend",
-      "reason": "Approved-vendor, price, lead-time, and minimum-order checks all pass."
-    }
-  },
-  {
-    "timestamp": "2026-10-16T20:28:54.607651+00:00",
-    "document": "data/practice_docs/p01_bluehen_quote.html",
-    "caching": false,
-    "status": "ok",
-    "usage": {
-      "timestamp": "2026-10-16T20:28:54.597180+00:00",
-      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p01_bluehen_quote.html",
-      "model": "gpt-6-luna",
-      "caching": false,
-      "input_tokens": 21393,
-      "cache_write_tokens": 10642,
-      "cache_read_tokens": 10499,
-      "output_tokens": 261,
-      "total_tokens": 21654,
-      "estimated_cost": 0.0015909399999999999
-    },
-    "answer": {
-      "vendor": "Blue Hen Apparel",
-      "sku": "CC-HD-006",
-      "unit_price": 21.8,
-      "lead_time_days": 14,
-      "minimum_order": 240,
-      "decision": "recommend",
-      "reason": "Approved-vendor, price, lead-time, and minimum-order checks all pass."
-    }
-  },
-  {
-    "timestamp": "2026-10-16T20:28:59.001060+00:00",
-    "document": "data/practice_docs/p02_elmcity_quote.html",
-    "caching": false,
-    "status": "ok",
-    "usage": {
-      "timestamp": "2026-10-16T20:28:58.996267+00:00",
-      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p02_elmcity_quote.html",
-      "model": "gpt-6-luna",
-      "caching": false,
-      "input_tokens": 21395,
-      "cache_write_tokens": 10634,
-      "cache_read_tokens": 10509,
-      "output_tokens": 200,
-      "total_tokens": 21595,
-      "estimated_cost": 0.0015595399999999999
+      "output_tokens": 192,
+      "total_tokens": 21525,
+      "estimated_cost": 0.000351445
     },
     "answer": {
       "vendor": "Elm City Screenprint",
@@ -378,21 +54,21 @@
     }
   },
   {
-    "timestamp": "2026-10-16T20:29:04.029025+00:00",
+    "timestamp": "2026-10-16T22:14:21.591484+00:00",
     "document": "data/practice_docs/p03_ivyprint_catalog.html",
-    "caching": false,
+    "caching": true,
     "status": "ok",
     "usage": {
-      "timestamp": "2026-10-16T20:29:04.017937+00:00",
+      "timestamp": "2026-10-16T22:14:21.583655+00:00",
       "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p03_ivyprint_catalog.html",
       "model": "gpt-6-luna",
-      "caching": false,
-      "input_tokens": 21367,
-      "cache_write_tokens": 10615,
-      "cache_read_tokens": 10500,
-      "output_tokens": 178,
-      "total_tokens": 21545,
-      "estimated_cost": 0.001546075
+      "caching": true,
+      "input_tokens": 21323,
+      "cache_write_tokens": 159,
+      "cache_read_tokens": 20912,
+      "output_tokens": 205,
+      "total_tokens": 21528,
+      "estimated_cost": 0.000356695
     },
     "answer": {
       "vendor": "Ivy Print Co",
@@ -401,25 +77,25 @@
       "lead_time_days": 10,
       "minimum_order": 150,
       "decision": "do_not_recommend",
-      "reason": "The approved-vendor check fails because Ivy Print Co is removed."
+      "reason": "The approved-vendor check fails because Ivy Print Co is removed from the vendor list."
     }
   },
   {
-    "timestamp": "2026-10-16T20:29:08.807046+00:00",
+    "timestamp": "2026-10-16T22:14:34.903480+00:00",
     "document": "data/practice_docs/p04_harborstitch_quote.html",
-    "caching": false,
+    "caching": true,
     "status": "ok",
     "usage": {
-      "timestamp": "2026-10-16T20:29:08.795907+00:00",
+      "timestamp": "2026-10-16T22:14:34.895986+00:00",
       "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p04_harborstitch_quote.html",
       "model": "gpt-6-luna",
-      "caching": false,
-      "input_tokens": 21400,
-      "cache_write_tokens": 10643,
-      "cache_read_tokens": 10505,
-      "output_tokens": 192,
-      "total_tokens": 21592,
-      "estimated_cost": 0.0015566249999999998
+      "caching": true,
+      "input_tokens": 21350,
+      "cache_write_tokens": 184,
+      "cache_read_tokens": 20914,
+      "output_tokens": 218,
+      "total_tokens": 21568,
+      "estimated_cost": 0.00036634
     },
     "answer": {
       "vendor": "Harbor Stitch Embroidery",
@@ -428,25 +104,25 @@
       "lead_time_days": 16,
       "minimum_order": 120,
       "decision": "recommend",
-      "reason": "Recommend because the approved-vendor, price, lead-time, and minimum-order checks all pass."
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
     }
   },
   {
-    "timestamp": "2026-10-16T20:29:14.065142+00:00",
+    "timestamp": "2026-10-16T22:14:39.916962+00:00",
     "document": "data/practice_docs/p11_yorkst_quote.html",
-    "caching": false,
+    "caching": true,
     "status": "ok",
     "usage": {
-      "timestamp": "2026-10-16T20:29:14.054208+00:00",
+      "timestamp": "2026-10-16T22:14:39.911022+00:00",
       "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p11_yorkst_quote.html",
       "model": "gpt-6-luna",
-      "caching": false,
-      "input_tokens": 21375,
-      "cache_write_tokens": 10619,
-      "cache_read_tokens": 10504,
-      "output_tokens": 172,
-      "total_tokens": 21547,
-      "estimated_cost": 0.001543615
+      "caching": true,
+      "input_tokens": 21323,
+      "cache_write_tokens": 159,
+      "cache_read_tokens": 20912,
+      "output_tokens": 183,
+      "total_tokens": 21506,
+      "estimated_cost": 0.00034569500000000003
     },
     "answer": {
       "vendor": "York Street Headwear",
@@ -455,25 +131,25 @@
       "lead_time_days": 12,
       "minimum_order": 180,
       "decision": "do_not_recommend",
-      "reason": "The price check fails because the quoted unit price exceeds the catalogue maximum for this SKU."
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue limit for this SKU."
     }
   },
   {
-    "timestamp": "2026-10-16T20:29:21.589525+00:00",
+    "timestamp": "2026-10-16T22:14:47.282678+00:00",
     "document": "data/practice_docs/p05_maplemills_quote.pdf",
-    "caching": false,
+    "caching": true,
     "status": "ok",
     "usage": {
-      "timestamp": "2026-10-16T20:29:21.579006+00:00",
+      "timestamp": "2026-10-16T22:14:47.271742+00:00",
       "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p05_maplemills_quote.pdf",
       "model": "gpt-6-luna",
-      "caching": false,
-      "input_tokens": 21406,
-      "cache_write_tokens": 10650,
-      "cache_read_tokens": 10504,
-      "output_tokens": 121,
-      "total_tokens": 21527,
-      "estimated_cost": 0.00152199
+      "caching": true,
+      "input_tokens": 21354,
+      "cache_write_tokens": 190,
+      "cache_read_tokens": 20912,
+      "output_tokens": 204,
+      "total_tokens": 21558,
+      "estimated_cost": 0.00036007
     },
     "answer": {
       "vendor": "Maple Leaf Mills",
@@ -482,25 +158,25 @@
       "lead_time_days": 28,
       "minimum_order": 100,
       "decision": "do_not_recommend",
-      "reason": "The lead-time check fails because the quoted 28-day lead time exceeds the 21-day limit."
+      "reason": "The lead-time check fails because the quoted 28-business-day lead time exceeds the 21-day limit."
     }
   },
   {
-    "timestamp": "2026-10-16T20:29:31.573112+00:00",
+    "timestamp": "2026-10-16T22:14:52.295129+00:00",
     "document": "data/practice_docs/p06_qtextile_quote.pdf",
-    "caching": false,
+    "caching": true,
     "status": "ok",
     "usage": {
-      "timestamp": "2026-10-16T20:29:31.561548+00:00",
+      "timestamp": "2026-10-16T22:14:52.287117+00:00",
       "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p06_qtextile_quote.pdf",
       "model": "gpt-6-luna",
-      "caching": false,
-      "input_tokens": 21448,
-      "cache_write_tokens": 10693,
-      "cache_read_tokens": 10503,
-      "output_tokens": 190,
-      "total_tokens": 21638,
-      "estimated_cost": 0.001561855
+      "caching": true,
+      "input_tokens": 21398,
+      "cache_write_tokens": 234,
+      "cache_read_tokens": 20912,
+      "output_tokens": 205,
+      "total_tokens": 21603,
+      "estimated_cost": 0.00036607
     },
     "answer": {
       "vendor": "Quinnipiac Textile Deals",
@@ -509,79 +185,79 @@
       "lead_time_days": 6,
       "minimum_order": 200,
       "decision": "do_not_recommend",
-      "reason": "The approved-vendor check fails because Quinnipiac Textile Deals is a removed vendor."
+      "reason": "The approved-vendor check fails because Quinnipiac Textile Deals is removed from the vendor list."
     }
   },
   {
-    "timestamp": "2026-10-16T20:29:40.679653+00:00",
+    "timestamp": "2026-10-16T22:14:58.150642+00:00",
     "document": "data/practice_docs/p07_longwharf_quote.pdf",
-    "caching": false,
+    "caching": true,
     "status": "ok",
     "usage": {
-      "timestamp": "2026-10-16T20:29:40.674939+00:00",
+      "timestamp": "2026-10-16T22:14:58.141837+00:00",
       "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p07_longwharf_quote.pdf",
       "model": "gpt-6-luna",
-      "caching": false,
-      "input_tokens": 21423,
-      "cache_write_tokens": 10668,
-      "cache_read_tokens": 10503,
-      "output_tokens": 248,
-      "total_tokens": 21671,
-      "estimated_cost": 0.00158773
+      "caching": true,
+      "input_tokens": 21347,
+      "cache_write_tokens": 183,
+      "cache_read_tokens": 20912,
+      "output_tokens": 222,
+      "total_tokens": 21569,
+      "estimated_cost": 0.000368195
     },
     "answer": {
       "vendor": "Long Wharf Knitting",
       "sku": "CC-KN-001",
       "unit_price": 17.23,
-      "lead_time_days": 7,
+      "lead_time_days": 35,
       "minimum_order": 120,
-      "decision": "recommend",
-      "reason": "Approved-vendor, price, lead-time, and minimum-order checks all pass using the quote\u2019s corrected 7-business-day lead time."
+      "decision": "do_not_recommend",
+      "reason": "The lead-time check fails because the quoted 35-business-day lead time exceeds the 21-day limit."
     }
   },
   {
-    "timestamp": "2026-10-16T20:29:46.438673+00:00",
+    "timestamp": "2026-10-16T22:15:03.507425+00:00",
     "document": "data/practice_docs/p12_bluehen_quote.pdf",
-    "caching": false,
+    "caching": true,
     "status": "ok",
     "usage": {
-      "timestamp": "2026-10-16T20:29:46.433567+00:00",
+      "timestamp": "2026-10-16T22:15:03.502093+00:00",
       "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p12_bluehen_quote.pdf",
       "model": "gpt-6-luna",
-      "caching": false,
-      "input_tokens": 21427,
-      "cache_write_tokens": 10670,
-      "cache_read_tokens": 10505,
-      "output_tokens": 207,
-      "total_tokens": 21634,
-      "estimated_cost": 0.0015675
+      "caching": true,
+      "input_tokens": 21335,
+      "cache_write_tokens": 172,
+      "cache_read_tokens": 20911,
+      "output_tokens": 181,
+      "total_tokens": 21516,
+      "estimated_cost": 0.00034630999999999996
     },
     "answer": {
       "vendor": "Blue Hen Apparel",
       "sku": "CC-CR-010",
-      "unit_price": 17.44,
+      "unit_price": 27.72,
       "lead_time_days": 13,
       "minimum_order": 200,
-      "decision": "recommend",
-      "reason": "Recommend because the approved-vendor, price, lead-time, and minimum-order checks all pass using the revised quote price."
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue limit for this SKU."
     }
   },
   {
-    "timestamp": "2026-10-16T20:29:51.404826+00:00",
+    "timestamp": "2026-10-16T22:15:45.558001+00:00",
     "document": "data/practice_docs/p08_chapelst_email.eml",
-    "caching": false,
+    "caching": true,
     "status": "ok",
     "usage": {
-      "timestamp": "2026-10-16T20:29:51.395735+00:00",
+      "timestamp": "2026-10-16T22:15:45.546272+00:00",
       "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p08_chapelst_email.eml",
       "model": "gpt-6-luna",
-      "caching": false,
-      "input_tokens": 21379,
-      "cache_write_tokens": 10623,
-      "cache_read_tokens": 10504,
-      "output_tokens": 210,
-      "total_tokens": 21589,
-      "estimated_cost": 0.0015631150000000001
+      "caching": true,
+      "input_tokens": 21329,
+      "cache_write_tokens": 164,
+      "cache_read_tokens": 20913,
+      "output_tokens": 196,
+      "total_tokens": 21525,
+      "estimated_cost": 0.00035283000000000005
     },
     "answer": {
       "vendor": "Chapel Street Goods",
@@ -590,25 +266,25 @@
       "lead_time_days": 6,
       "minimum_order": 250,
       "decision": "recommend",
-      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+      "reason": "Approved-vendor, price, lead-time, and minimum-order checks all pass."
     }
   },
   {
-    "timestamp": "2026-10-16T20:29:56.253970+00:00",
+    "timestamp": "2026-10-16T22:16:02.556282+00:00",
     "document": "data/practice_docs/p09_westville_email.eml",
-    "caching": false,
+    "caching": true,
     "status": "ok",
     "usage": {
-      "timestamp": "2026-10-16T20:29:56.240712+00:00",
+      "timestamp": "2026-10-16T22:16:02.545429+00:00",
       "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p09_westville_email.eml",
       "model": "gpt-6-luna",
-      "caching": false,
-      "input_tokens": 21374,
-      "cache_write_tokens": 10619,
-      "cache_read_tokens": 10503,
-      "output_tokens": 176,
-      "total_tokens": 21550,
-      "estimated_cost": 0.001545605
+      "caching": true,
+      "input_tokens": 21326,
+      "cache_write_tokens": 161,
+      "cache_read_tokens": 20913,
+      "output_tokens": 185,
+      "total_tokens": 21511,
+      "estimated_cost": 0.00034695500000000003
     },
     "answer": {
       "vendor": "Westville Bag Co",
@@ -621,21 +297,345 @@
     }
   },
   {
-    "timestamp": "2026-10-16T20:30:00.956881+00:00",
+    "timestamp": "2026-10-16T22:16:06.953834+00:00",
+    "document": "data/practice_docs/p10_eastrock_email.eml",
+    "caching": true,
+    "status": "ok",
+    "usage": {
+      "timestamp": "2026-10-16T22:16:06.944117+00:00",
+      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p10_eastrock_email.eml",
+      "model": "gpt-6-luna",
+      "caching": true,
+      "input_tokens": 21341,
+      "cache_write_tokens": 176,
+      "cache_read_tokens": 20913,
+      "output_tokens": 215,
+      "total_tokens": 21556,
+      "estimated_cost": 0.00036383000000000005
+    },
+    "answer": {
+      "vendor": "East Rock Ceramics",
+      "sku": "CC-MG-003",
+      "unit_price": 4.87,
+      "lead_time_days": 11,
+      "minimum_order": 96,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:11.757920+00:00",
+    "document": "data/practice_docs/p01_bluehen_quote.html",
+    "caching": false,
+    "status": "ok",
+    "usage": {
+      "timestamp": "2026-10-16T22:16:11.749560+00:00",
+      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p01_bluehen_quote.html",
+      "model": "gpt-6-luna",
+      "caching": false,
+      "input_tokens": 21406,
+      "cache_write_tokens": 21154,
+      "cache_read_tokens": 0,
+      "output_tokens": 184,
+      "total_tokens": 21590,
+      "estimated_cost": 0.00276145
+    },
+    "answer": {
+      "vendor": "Blue Hen Apparel",
+      "sku": "CC-HD-006",
+      "unit_price": 21.8,
+      "lead_time_days": 14,
+      "minimum_order": 240,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:16.174609+00:00",
+    "document": "data/practice_docs/p02_elmcity_quote.html",
+    "caching": false,
+    "status": "ok",
+    "usage": {
+      "timestamp": "2026-10-16T22:16:16.168881+00:00",
+      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p02_elmcity_quote.html",
+      "model": "gpt-6-luna",
+      "caching": false,
+      "input_tokens": 21386,
+      "cache_write_tokens": 21134,
+      "cache_read_tokens": 0,
+      "output_tokens": 187,
+      "total_tokens": 21573,
+      "estimated_cost": 0.00276045
+    },
+    "answer": {
+      "vendor": "Elm City Screenprint",
+      "sku": "CC-TE-004",
+      "unit_price": 9.83,
+      "lead_time_days": 9,
+      "minimum_order": 300,
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue maximum for this SKU."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:21.812542+00:00",
+    "document": "data/practice_docs/p03_ivyprint_catalog.html",
+    "caching": false,
+    "status": "ok",
+    "usage": {
+      "timestamp": "2026-10-16T22:16:21.804654+00:00",
+      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p03_ivyprint_catalog.html",
+      "model": "gpt-6-luna",
+      "caching": false,
+      "input_tokens": 21373,
+      "cache_write_tokens": 21121,
+      "cache_read_tokens": 0,
+      "output_tokens": 165,
+      "total_tokens": 21538,
+      "estimated_cost": 0.002747825
+    },
+    "answer": {
+      "vendor": "Ivy Print Co",
+      "sku": "CC-PG-006",
+      "unit_price": 5.83,
+      "lead_time_days": 10,
+      "minimum_order": 150,
+      "decision": "do_not_recommend",
+      "reason": "The approved-vendor check fails because Ivy Print Co is removed from the vendor list."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:34.408859+00:00",
+    "document": "data/practice_docs/p04_harborstitch_quote.html",
+    "caching": false,
+    "status": "ok",
+    "usage": {
+      "timestamp": "2026-10-16T22:16:34.400746+00:00",
+      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p04_harborstitch_quote.html",
+      "model": "gpt-6-luna",
+      "caching": false,
+      "input_tokens": 21400,
+      "cache_write_tokens": 21148,
+      "cache_read_tokens": 0,
+      "output_tokens": 183,
+      "total_tokens": 21583,
+      "estimated_cost": 0.0027602
+    },
+    "answer": {
+      "vendor": "Harbor Stitch Embroidery",
+      "sku": "CC-HT-001",
+      "unit_price": 8.68,
+      "lead_time_days": 16,
+      "minimum_order": 120,
+      "decision": "recommend",
+      "reason": "Approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:39.519945+00:00",
+    "document": "data/practice_docs/p11_yorkst_quote.html",
+    "caching": false,
+    "status": "ok",
+    "usage": {
+      "timestamp": "2026-10-16T22:16:39.516601+00:00",
+      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p11_yorkst_quote.html",
+      "model": "gpt-6-luna",
+      "caching": false,
+      "input_tokens": 21374,
+      "cache_write_tokens": 21122,
+      "cache_read_tokens": 0,
+      "output_tokens": 175,
+      "total_tokens": 21549,
+      "estimated_cost": 0.0027529499999999997
+    },
+    "answer": {
+      "vendor": "York Street Headwear",
+      "sku": "CC-HW-002",
+      "unit_price": 13.62,
+      "lead_time_days": 12,
+      "minimum_order": 180,
+      "decision": "do_not_recommend",
+      "reason": "The price check fails because the quoted unit price exceeds the catalogue limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:46.008715+00:00",
+    "document": "data/practice_docs/p05_maplemills_quote.pdf",
+    "caching": false,
+    "status": "ok",
+    "usage": {
+      "timestamp": "2026-10-16T22:16:46.000513+00:00",
+      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p05_maplemills_quote.pdf",
+      "model": "gpt-6-luna",
+      "caching": false,
+      "input_tokens": 21405,
+      "cache_write_tokens": 21153,
+      "cache_read_tokens": 0,
+      "output_tokens": 224,
+      "total_tokens": 21629,
+      "estimated_cost": 0.0027813250000000003
+    },
+    "answer": {
+      "vendor": "Maple Leaf Mills",
+      "sku": "CC-WV-003",
+      "unit_price": 24.16,
+      "lead_time_days": 28,
+      "minimum_order": 100,
+      "decision": "do_not_recommend",
+      "reason": "The lead-time check fails because the quoted 28-business-day lead time exceeds the 21-day limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:16:51.715941+00:00",
+    "document": "data/practice_docs/p06_qtextile_quote.pdf",
+    "caching": false,
+    "status": "ok",
+    "usage": {
+      "timestamp": "2026-10-16T22:16:51.707579+00:00",
+      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p06_qtextile_quote.pdf",
+      "model": "gpt-6-luna",
+      "caching": false,
+      "input_tokens": 21448,
+      "cache_write_tokens": 21196,
+      "cache_read_tokens": 0,
+      "output_tokens": 193,
+      "total_tokens": 21641,
+      "estimated_cost": 0.0027711999999999997
+    },
+    "answer": {
+      "vendor": "Quinnipiac Textile Deals",
+      "sku": "CC-TE-017",
+      "unit_price": 7.01,
+      "lead_time_days": 6,
+      "minimum_order": 200,
+      "decision": "do_not_recommend",
+      "reason": "The approved-vendor check fails because Quinnipiac Textile Deals is removed from the vendor list."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:17:43.462450+00:00",
+    "document": "data/practice_docs/p07_longwharf_quote.pdf",
+    "caching": false,
+    "status": "ok",
+    "usage": {
+      "timestamp": "2026-10-16T22:17:43.453290+00:00",
+      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p07_longwharf_quote.pdf",
+      "model": "gpt-6-luna",
+      "caching": false,
+      "input_tokens": 21399,
+      "cache_write_tokens": 21147,
+      "cache_read_tokens": 0,
+      "output_tokens": 227,
+      "total_tokens": 21626,
+      "estimated_cost": 0.0027820749999999997
+    },
+    "answer": {
+      "vendor": "Long Wharf Knitting",
+      "sku": "CC-KN-001",
+      "unit_price": 17.23,
+      "lead_time_days": 35,
+      "minimum_order": 120,
+      "decision": "do_not_recommend",
+      "reason": "Do not recommend because the lead-time check fails: the quoted 35 business days exceeds the 21-day limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:18:36.782386+00:00",
+    "document": "data/practice_docs/p12_bluehen_quote.pdf",
+    "caching": false,
+    "status": "ok",
+    "usage": {
+      "timestamp": "2026-10-16T22:18:36.773918+00:00",
+      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p12_bluehen_quote.pdf",
+      "model": "gpt-6-luna",
+      "caching": false,
+      "input_tokens": 21377,
+      "cache_write_tokens": 21125,
+      "cache_read_tokens": 0,
+      "output_tokens": 168,
+      "total_tokens": 21545,
+      "estimated_cost": 0.002749825
+    },
+    "answer": {
+      "vendor": "Blue Hen Apparel",
+      "sku": "CC-CR-010",
+      "unit_price": 27.72,
+      "lead_time_days": 13,
+      "minimum_order": 200,
+      "decision": "do_not_recommend",
+      "reason": "The quoted unit price fails the price check for this SKU."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:18:42.177869+00:00",
+    "document": "data/practice_docs/p08_chapelst_email.eml",
+    "caching": false,
+    "status": "ok",
+    "usage": {
+      "timestamp": "2026-10-16T22:18:42.169274+00:00",
+      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p08_chapelst_email.eml",
+      "model": "gpt-6-luna",
+      "caching": false,
+      "input_tokens": 21384,
+      "cache_write_tokens": 21132,
+      "cache_read_tokens": 0,
+      "output_tokens": 206,
+      "total_tokens": 21590,
+      "estimated_cost": 0.0027697
+    },
+    "answer": {
+      "vendor": "Chapel Street Goods",
+      "sku": "CC-PG-010",
+      "unit_price": 4.27,
+      "lead_time_days": 6,
+      "minimum_order": 250,
+      "decision": "recommend",
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:19:28.832613+00:00",
+    "document": "data/practice_docs/p09_westville_email.eml",
+    "caching": false,
+    "status": "ok",
+    "usage": {
+      "timestamp": "2026-10-16T22:19:28.828485+00:00",
+      "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p09_westville_email.eml",
+      "model": "gpt-6-luna",
+      "caching": false,
+      "input_tokens": 21374,
+      "cache_write_tokens": 21122,
+      "cache_read_tokens": 0,
+      "output_tokens": 213,
+      "total_tokens": 21587,
+      "estimated_cost": 0.0027719499999999996
+    },
+    "answer": {
+      "vendor": "Westville Bag Co",
+      "sku": "CC-BG-007",
+      "unit_price": 24.82,
+      "lead_time_days": 26,
+      "minimum_order": 144,
+      "decision": "do_not_recommend",
+      "reason": "The lead-time check fails because the quoted 26-business-day lead time exceeds the 21-day limit."
+    }
+  },
+  {
+    "timestamp": "2026-10-16T22:19:38.606249+00:00",
     "document": "data/practice_docs/p10_eastrock_email.eml",
     "caching": false,
     "status": "ok",
     "usage": {
-      "timestamp": "2026-10-16T20:30:00.950083+00:00",
+      "timestamp": "2026-10-16T22:19:38.600987+00:00",
       "document": "/Users/emmaholub/Desktop/AI Foundations/Homeworks 6/data/practice_docs/p10_eastrock_email.eml",
       "model": "gpt-6-luna",
       "caching": false,
-      "input_tokens": 21385,
-      "cache_write_tokens": 10632,
-      "cache_read_tokens": 10501,
-      "output_tokens": 202,
-      "total_tokens": 21587,
-      "estimated_cost": 0.00156021
+      "input_tokens": 21391,
+      "cache_write_tokens": 21139,
+      "cache_read_tokens": 0,
+      "output_tokens": 205,
+      "total_tokens": 21596,
+      "estimated_cost": 0.0027700750000000003
     },
     "answer": {
       "vendor": "East Rock Ceramics",

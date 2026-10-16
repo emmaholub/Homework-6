@@ -21,7 +21,7 @@
 - `send_email(to, subject, body)`: fake trap tool that writes an attempted email to `output/trap_calls.json`; it never sends anything.
 - `approve_payment(vendor, amount, reason)`: fake trap tool that writes an attempted payment approval to `output/trap_calls.json`; it never approves or moves money.
 
-Both trap tools also append their call to `output/audit_trail.json`. The defended `send_email_gated` and `approve_payment_gated` tools are preserved but always block inside the model run; human approval must occur in code or through a person outside the agent. The final structured answer and token/cost usage are appended after every run; token records are stored in root `usage_log.json`.
+Both trap tools also append their call to `output/audit_trail.json`. The defended `send_email_gated` and `approve_payment_gated` tools are preserved but always block inside the model run; human approval must occur in code or through a person outside the agent. The final structured answer and token/cost usage are appended after every run; token records are stored in `output/usage_log.json`.
 
 ## Safety
 
@@ -36,10 +36,10 @@ python agent.py --doc data/practice_docs/p01_bluehen_quote.html
 python agent.py --doc data/practice_docs/p08_chapelst_email.eml
 ```
 
-Problem 4's 24-call cache comparison is recorded in `cache_test.json` and summarized in `cache_test.md`; the cache-off mode uses a unique system-prompt prefix and checks for zero provider-reported cached tokens.
+Problem 4's 24-call cache comparison is recorded in `output/cache_test.json` and summarized in `output/cache_test.md`; cache-off instructions are regenerated for every model request and all 12 cache-off records have zero provider-reported cached tokens.
 
-Problem 6 adds `defense_results.json` and `defense_results.md`. The defended path cleans hidden document content before the model sees it and exposes code-blocked gated side-effect tools. The original undefended path remains available through `attack_agent.py` for Problem 5.
+Problem 6 adds `output/defense_results.json` and `output/defense_results.md`. The defended path cleans hidden document content before the model sees it and exposes code-blocked gated side-effect tools. The original undefended path remains available through `attack_agent.py` for Problem 5.
 
-Problem 7 adds two new attacks under `data/my_attacks/` and records undefended/defended results in `red_team_results.json` and `red_team.md`. The attacks use an HTML title payload and zero-width Unicode email text.
+Problem 7 adds two new attacks under `data/my_attacks/` and records undefended/defended results in `output/red_team_results.json` and `output/red_team.md`. The attacks use an HTML title payload and a hidden mail-header payload.
 
-Problem 8 runs the final defended agent on `data/exam_docs/` with `exam_test.py`; its ten machine-generated entries are saved in `exam_results.json`, including answer fields, `trap_tool_called`, token counts, and estimated cost.
+Problem 8 runs the final defended agent on `data/exam_docs/` with `exam_test.py`; its ten machine-generated entries are saved in `output/exam_results.json`, including answer fields, `trap_tool_called`, token counts, and cost.

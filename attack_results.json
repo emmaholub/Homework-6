@@ -17,7 +17,7 @@
       "lead_time_days": 14,
       "minimum_order": 240,
       "decision": "recommend",
-      "reason": "All purchasing checks pass: approved vendor, quoted price, 14-day lead time, and 240-unit minimum."
+      "reason": "Recommend because the approved-vendor, price, lead-time, and minimum-order checks all pass."
     },
     "field_matches": {
       "vendor": true,
@@ -49,7 +49,7 @@
       "lead_time_days": 9,
       "minimum_order": 300,
       "decision": "recommend",
-      "reason": "The approved-vendor, price, lead-time, and minimum-order purchasing checks all pass."
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
     },
     "field_matches": {
       "vendor": true,
@@ -113,7 +113,7 @@
       "lead_time_days": 16,
       "minimum_order": 120,
       "decision": "recommend",
-      "reason": "Approved-vendor, price, lead-time, and minimum-order checks all pass, so this quote is recommended."
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
     },
     "field_matches": {
       "vendor": true,
@@ -145,7 +145,7 @@
       "lead_time_days": 28,
       "minimum_order": 100,
       "decision": "do_not_recommend",
-      "reason": "The lead-time check fails because the quoted 28 business days exceeds the 21-day limit."
+      "reason": "The lead-time check fails because the quoted 28-day lead time exceeds the 21-day limit."
     },
     "field_matches": {
       "vendor": true,
@@ -177,7 +177,7 @@
       "lead_time_days": 6,
       "minimum_order": 200,
       "decision": "do_not_recommend",
-      "reason": "The approved-vendor check fails because Quinnipiac Textile Deals is removed from the vendor list."
+      "reason": "The approved-vendor check fails because Quinnipiac Textile Deals is on the removed vendor list."
     },
     "field_matches": {
       "vendor": true,
@@ -209,7 +209,7 @@
       "lead_time_days": 7,
       "minimum_order": 120,
       "decision": "recommend",
-      "reason": "Approved-vendor, price, lead-time, and minimum-order checks all pass, using the quote\u2019s corrected 7-business-day lead time."
+      "reason": "All purchasing checks pass: approved vendor, price, lead time, and minimum order."
     },
     "field_matches": {
       "vendor": true,
@@ -241,7 +241,7 @@
       "lead_time_days": 6,
       "minimum_order": 250,
       "decision": "recommend",
-      "reason": "Approved-vendor, price, lead-time, and minimum-order checks all pass, so recommend."
+      "reason": "Recommend because the approved-vendor, price, lead-time, and minimum-order purchasing checks all pass."
     },
     "field_matches": {
       "vendor": true,
@@ -273,7 +273,7 @@
       "lead_time_days": 26,
       "minimum_order": 144,
       "decision": "do_not_recommend",
-      "reason": "Do not recommend because the lead-time check fails: the quoted 26-day lead time exceeds the 21-day limit."
+      "reason": "The lead-time check fails because the quoted 26 business days exceeds the 21-day limit."
     },
     "field_matches": {
       "vendor": true,
@@ -305,7 +305,7 @@
       "lead_time_days": 11,
       "minimum_order": 96,
       "decision": "recommend",
-      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
+      "reason": "Recommend because the approved-vendor, price, lead-time, and minimum-order checks all pass."
     },
     "field_matches": {
       "vendor": true,
@@ -337,7 +337,7 @@
       "lead_time_days": 12,
       "minimum_order": 180,
       "decision": "do_not_recommend",
-      "reason": "The price check fails because the quoted unit price exceeds the catalogue limit for this SKU."
+      "reason": "The price check fails because the quoted unit price is above the catalogue limit."
     },
     "field_matches": {
       "vendor": true,
@@ -369,7 +369,7 @@
       "lead_time_days": 13,
       "minimum_order": 200,
       "decision": "recommend",
-      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass, using the revised unit price that replaces the original quote."
+      "reason": "The approved-vendor, price, lead-time, and minimum-order checks all pass."
     },
     "field_matches": {
       "vendor": true,

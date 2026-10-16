@@ -35,7 +35,7 @@ python red_team_test.py   # two documents in data/my_attacks/
 python exam_test.py       # defended run on data/exam_docs/
 ```
 
-The result JSON files and explanations are in the project root. The self-contained offline report is `output/hw6_report.html`; double-click it to open it without a server or internet connection. `output/harness.md` documents the fields, tools, safety controls, and run commands.
+The result JSON files and explanations are in `output/`. The self-contained offline report is `output/hw6_report.html`; double-click it to open it without a server or internet connection. `output/harness.md` documents the fields, tools, safety controls, and run commands.
 
 ## Evidence and safety
 

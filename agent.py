@@ -20,6 +20,30 @@ PROMPT = (ROOT / "prompts" / "prompt.md").read_text(encoding="utf-8")
 HANDBOOK = (ROOT / "data" / "shop_handbook.md").read_text(encoding="utf-8")
 MODEL = "openai:gpt-6-luna"
 
+def _keep_first_pdf_fields(text: str) -> str:
+    """Defensive PDF normalization: retain the first occurrence of each field."""
+    seen = set(); kept = []
+    for line in text.splitlines():
+        low = line.lower()
+        field = next((name for name, markers in {
+            "price": ("unit price", "price:"),
+            "lead": ("lead time", "lead-time"),
+            "minimum": ("minimum order", "min order"),
+        }.items() if any(marker in low for marker in markers)), None)
+        if field and field in seen: continue
+        if field: seen.add(field)
+        kept.append(line)
+    return "\n".join(kept)
+
+def _system_text(caching: bool) -> str:
+    nonce = "" if caching else os.urandom(16).hex()
+    return (f"Cache-off request nonce: {nonce}\n" if nonce else "") + PROMPT + "\n\n## SHOP HANDBOOK\n" + HANDBOOK
+
+def _system_prompt(caching: bool):
+    if caching:
+        return _system_text(True)
+    return lambda: _system_text(False)
+
 
 def make_agent(caching: bool = True) -> Agent:
     key = os.getenv("PORTKEY_API_KEY")
@@ -27,8 +51,7 @@ def make_agent(caching: bool = True) -> Agent:
         raise RuntimeError("PORTKEY_API_KEY is required")
     os.environ.setdefault("OPENAI_API_KEY", key)
     os.environ.setdefault("OPENAI_BASE_URL", "https://api.portkey.ai/v1")
-    cache_breaker = "" if caching else f"Cache-disabled run nonce: {os.urandom(16).hex()}\n\n"
-    return Agent(MODEL, system_prompt=cache_breaker + PROMPT + "\n\n## SHOP HANDBOOK\n" + HANDBOOK, output_type=VendorQuote, tools=[read_vendor_document, send_email, approve_payment])
+    return Agent(MODEL, instructions=_system_prompt(caching), output_type=VendorQuote, tools=[read_vendor_document, send_email, approve_payment])
 
 
 def make_defended_agent(caching: bool = True) -> Agent:
@@ -38,8 +61,7 @@ def make_defended_agent(caching: bool = True) -> Agent:
         raise RuntimeError("PORTKEY_API_KEY is required")
     os.environ.setdefault("OPENAI_API_KEY", key)
     os.environ.setdefault("OPENAI_BASE_URL", "https://api.portkey.ai/v1")
-    cache_breaker = "" if caching else f"Cache-disabled run nonce: {os.urandom(16).hex()}\n\n"
-    return Agent(MODEL, system_prompt=cache_breaker + PROMPT + "\n\n## SHOP HANDBOOK\n" + HANDBOOK, output_type=VendorQuote, tools=[read_vendor_document_clean, send_email_gated, approve_payment_gated])
+    return Agent(MODEL, instructions=_system_prompt(caching), output_type=VendorQuote, tools=[read_vendor_document_clean, send_email_gated, approve_payment_gated])
 
 
 def clean_document(path: Path) -> str:
@@ -68,6 +90,12 @@ def clean_document(path: Path) -> str:
             plain=message.get_body(preferencelist=("plain",))
             return plain.get_content() if plain else ""
         return message.get_content().replace("\u200b", "").replace("\u200c", "").replace("\u200d", "").replace("\ufeff", "")
+    if path.suffix.lower() == ".pdf":
+        try:
+            import pypdf
+            return _keep_first_pdf_fields("\n".join(page.extract_text() or "" for page in pypdf.PdfReader(str(path)).pages))
+        except ImportError:
+            return subprocess.check_output(["textutil", "-convert", "txt", "-stdout", str(path)], text=True)
     return read_document(path)
 
 
@@ -82,22 +110,7 @@ def read_document(path: Path) -> str:
             import pypdf
             reader = pypdf.PdfReader(str(path))
             text = "\n".join(page.extract_text() or "" for page in reader.pages)
-            # Keep the first occurrence of each quoted field. This is a
-            # document-structure rule, not a list of attacker phrases: later
-            # duplicate price/lead-time lines are treated as untrusted edits.
-            seen = set(); kept = []
-            for line in text.splitlines():
-                low = line.lower()
-                field = next((name for name, markers in {
-                    "price": ("unit price", "price:"),
-                    "lead": ("lead time", "lead-time"),
-                    "minimum": ("minimum order", "min order"),
-                }.items() if any(marker in low for marker in markers)), None)
-                if field and field in seen:
-                    continue
-                if field: seen.add(field)
-                kept.append(line)
-            return "\n".join(kept)
+            return text
         except ImportError:
             # macOS's built-in textutil provides a dependency-free fallback.
             return subprocess.check_output(["textutil", "-convert", "txt", "-stdout", str(path)], text=True)
@@ -127,7 +140,7 @@ async def run(path: str | Path, caching: bool = True, defended: bool = True) -> 
     total_tokens = getattr(usage, "total_tokens", input_tokens + output_tokens) or (input_tokens + output_tokens)
     uncached_input_tokens = max(0, input_tokens - cache_write_tokens - cache_read_tokens)
     cost = (uncached_input_tokens / 1_000_000 * 0.10) + (cache_write_tokens / 1_000_000 * 0.125) + (cache_read_tokens / 1_000_000 * 0.01) + (output_tokens / 1_000_000 * 0.50)
-    _append(ROOT / "usage_log.json", {"timestamp": datetime.now(timezone.utc).isoformat(), "document": str(document), "model": "gpt-6-luna", "caching": caching, "input_tokens": input_tokens, "cache_write_tokens": cache_write_tokens, "cache_read_tokens": cache_read_tokens, "output_tokens": output_tokens, "total_tokens": total_tokens, "estimated_cost": cost})
+    _append(ROOT / "output" / "usage_log.json", {"timestamp": datetime.now(timezone.utc).isoformat(), "document": str(document), "model": "gpt-6-luna", "caching": caching, "input_tokens": input_tokens, "cache_write_tokens": cache_write_tokens, "cache_read_tokens": cache_read_tokens, "output_tokens": output_tokens, "total_tokens": total_tokens, "estimated_cost": cost})
     _append(AUDIT_LOG, {"timestamp": datetime.now(timezone.utc).isoformat(), "action": "final_answer", "document": str(document), "tool_calls": ["read_vendor_document" if not defended else "read_vendor_document_clean"], "result": answer.model_dump()})
     return answer
 

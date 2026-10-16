@@ -12,7 +12,7 @@ DOCS = sorted((ROOT / "data" / "practice_docs").glob("p*.html")) + sorted((ROOT 
 
 
 async def main() -> None:
-    output_path = ROOT / "cache_test.json"
+    output_path = ROOT / "output" / "cache_test.json"
     records = json.loads(output_path.read_text()) if output_path.exists() else []
     completed = {(r.get("document"), r.get("caching")) for r in records}
     for caching in (True, False):
@@ -22,7 +22,7 @@ async def main() -> None:
                 continue
             try:
                 answer = await run(path, caching=caching)
-                after = json.loads((ROOT / "usage_log.json").read_text())
+                after = json.loads((ROOT / "output" / "usage_log.json").read_text())
                 usage = after[-1]
                 record = {"timestamp": datetime.now(timezone.utc).isoformat(), "document": str(path.relative_to(ROOT)), "caching": caching, "status": "ok", "usage": usage, "answer": answer.model_dump()}
             except Exception as exc:
