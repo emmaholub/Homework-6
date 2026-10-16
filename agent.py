@@ -113,6 +113,7 @@ async def run(path: str | Path, caching: bool = True, defended: bool = True) -> 
             "cache": caching,
             "openai_prompt_cache_key": ("hw6-stable" if caching else os.urandom(16).hex()),
             "openai_prompt_cache_options": ({"mode": "implicit"} if caching else {"mode": "explicit"}),
+            "openai_cache_instructions": caching,
         },
     )
     answer = result.output

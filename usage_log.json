@@ -4123,5 +4123,29 @@
     "output_tokens": 212,
     "total_tokens": 21601,
     "estimated_cost": 0.001565365
+  },
+  {
+    "timestamp": "2026-10-16T22:08:33.493068+00:00",
+    "document": "data/practice_docs/p01_bluehen_quote.html",
+    "model": "gpt-6-luna",
+    "caching": false,
+    "input_tokens": 21355,
+    "cache_write_tokens": 10616,
+    "cache_read_tokens": 10487,
+    "output_tokens": 180,
+    "total_tokens": 21535,
+    "estimated_cost": 0.00154707
+  },
+  {
+    "timestamp": "2026-10-16T22:09:16.635608+00:00",
+    "document": "data/practice_docs/p01_bluehen_quote.html",
+    "model": "gpt-6-luna",
+    "caching": false,
+    "input_tokens": 25965,
+    "cache_write_tokens": 12921,
+    "cache_read_tokens": 12792,
+    "output_tokens": 166,
+    "total_tokens": 26131,
+    "estimated_cost": 0.0018512449999999998
   }
 ]
