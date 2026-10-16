@@ -119,6 +119,10 @@ def read_document(path: Path) -> str:
 
 async def run(path: str | Path, caching: bool = True, defended: bool = True) -> VendorQuote:
     document = Path(path)
+    try:
+        audit_before = json.loads(AUDIT_LOG.read_text()) if AUDIT_LOG.exists() else []
+    except json.JSONDecodeError:
+        audit_before = []
     agent = make_defended_agent(caching=caching) if defended else make_agent(caching=caching)
     result = await agent.run(
         f"Analyze the vendor document at this path by calling your document-reading tool first: {document}",
@@ -141,7 +145,12 @@ async def run(path: str | Path, caching: bool = True, defended: bool = True) -> 
     uncached_input_tokens = max(0, input_tokens - cache_write_tokens - cache_read_tokens)
     cost = (uncached_input_tokens / 1_000_000 * 0.10) + (cache_write_tokens / 1_000_000 * 0.125) + (cache_read_tokens / 1_000_000 * 0.01) + (output_tokens / 1_000_000 * 0.50)
     _append(ROOT / "output" / "usage_log.json", {"timestamp": datetime.now(timezone.utc).isoformat(), "document": str(document), "model": "gpt-6-luna", "caching": caching, "input_tokens": input_tokens, "cache_write_tokens": cache_write_tokens, "cache_read_tokens": cache_read_tokens, "output_tokens": output_tokens, "total_tokens": total_tokens, "estimated_cost": cost})
-    _append(AUDIT_LOG, {"timestamp": datetime.now(timezone.utc).isoformat(), "action": "final_answer", "document": str(document), "tool_calls": ["read_vendor_document" if not defended else "read_vendor_document_clean"], "result": answer.model_dump()})
+    try:
+        audit_after = json.loads(AUDIT_LOG.read_text()) if AUDIT_LOG.exists() else []
+    except json.JSONDecodeError:
+        audit_after = []
+    observed_tools = [e.get("action") for e in audit_after[len(audit_before):] if e.get("action") != "final_answer"]
+    _append(AUDIT_LOG, {"timestamp": datetime.now(timezone.utc).isoformat(), "action": "final_answer", "document": str(document), "tool_calls": observed_tools, "result": answer.model_dump()})
     return answer
 
 

@@ -32,7 +32,7 @@ The defended run achieved **12/12 correct decisions and 12/12 complete field mat
 The 12 defended runs used the corrected cleaner and gated tools, and cost **$0.03319265** using the corrected Problem 4 rates. Each document required a reader-tool request and a structured-answer request.
 
 - **Code cleaning:** no separate model call and therefore approximately **$0 direct cost**. It can reduce input tokens by removing hidden text, although PDF normalization can add small formatting differences.
-- **Design isolation:** no separate model call. Keeping gated tool schemas adds only their small schema overhead, while code blocking removes the possibility of a costly side effect.
+- **Design isolation:** the reader-tool architecture adds a second model request per document, while gated tool schemas add only small schema overhead. Code blocking removes the possibility of a costly side effect even if the model attempts a gated call.
 - **Prompt rules and handbook:** this is the main fixed cost. The handbook is 10,184 tokens, so at the normal input rate it contributes approximately `10,184 / 1,000,000 × $0.10 = $0.0010184` per uncached call before other prompt/output overhead. With caching, the handbook portion is much cheaper after the initial write, as measured in Problem 4.
 
 The defended workflow makes two model requests per document: the model calls the reader tool and then returns the structured answer. That second request is the main defense-related cost; the defended run used roughly twice the input tokens of the old one-call baseline. With the valid cache test, caching is the appropriate production mode for this fixed handbook context.

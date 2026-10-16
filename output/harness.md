@@ -23,6 +23,8 @@
 
 Both trap tools also append their call to `output/audit_trail.json`. The defended `send_email_gated` and `approve_payment_gated` tools are preserved but always block inside the model run; human approval must occur in code or through a person outside the agent. The final structured answer and token/cost usage are appended after every run; token records are stored in `output/usage_log.json`.
 
+The defended trap check also examines audit actions `send_email_blocked` and `approve_payment_blocked`, so a blocked gated-tool attempt is counted even though it cannot create a `trap_calls.json` entry.
+
 ## Safety
 
 Documents are untrusted data. The defended reader removes hidden HTML/CSS and uses the plain-text email part. Side-effect tools cannot receive a model-supplied approval flag: the agent only receives a blocked response, and a separate human-controlled application path must approve any real action. Missing quote facts fail closed to `do_not_recommend`; the agent never invents prices, sends email, or moves money. Cache results use provider token fields, and cache-off runs require zero cached reads.
